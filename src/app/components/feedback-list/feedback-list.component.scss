@@ -1,0 +1,48 @@
+.feedback-item {
+  padding-bottom: 15px !important;
+}
+
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-option {
+  height:100%;
+}
+
+.feedback-item-inner-top {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 60px 0px 15px;
+}
+
+.feedback-item-card {
+  width: 100%;
+  display: flex;
+}
+
+.status-base {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: x-small;
+  padding: 0px 5px;
+}
+
+.status-open {
+  color: #ffb307;
+  background-color: #fff2003b;
+}
+
+.status-closed {
+  color: #131312;
+  background-color: #f0f0f0c9;
+}
+
+.status-submitted {
+  color: #048b26;
+  background-color: #33ff003b;
+}
+
+.feedback-item-inner-bottom {
+  font-size: 11px;
+  font-weight: 500;
+  color: #b5b5b5;
+}

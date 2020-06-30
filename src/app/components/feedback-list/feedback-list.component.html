@@ -1,0 +1,30 @@
+<mat-list role="list" >
+  <mat-list-item
+    role="listitem"
+    class="feedback-item"
+    *ngFor="let feedback of feedbacks"
+  >
+    <mat-card class="feedback-item-card" >
+      <mat-icon>list_alt</mat-icon>
+      <div class="feedback-item-inner-top">
+        <span class="mat-small">
+          <b>{{ feedback.desc }} </b></span
+        >
+        <span
+          class="mat-small status-base"
+          [ngClass]="{
+            'status-open': feedback.status == 'Open',
+            'status-closed': feedback.status == 'Closed',
+            'status-submitted': feedback.status == 'Submitted'
+          }"
+        >
+          {{ feedback.status }}
+        </span>
+        <div class="feedback-item-inner-bottom">
+            {{ feedback.department }} - {{ feedback.author }}
+          </div>
+      </div>
+      
+    </mat-card>
+  </mat-list-item>
+</mat-list>
