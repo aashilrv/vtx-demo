@@ -1,0 +1,23 @@
+<li>
+
+  <!-- edit mode -->
+  <ng-container *ngIf="isEdit; else normalView">
+
+    <srp-icon icon="checked"></srp-icon>
+
+    <form [formGroup]="taskForm" (ngSubmit)="submit()">
+      <srp-input inputType="text"
+                 placeholder="Text input"
+                 formControlName="value"></srp-input>
+    </form>
+
+  </ng-container>
+
+  <!-- view mode -->
+  <ng-template #normalView>
+
+    <srp-icon icon="bell"></srp-icon>
+    {{ task.value }}
+  </ng-template>
+
+</li>

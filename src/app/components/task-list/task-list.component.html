@@ -1,0 +1,20 @@
+<header>
+
+  <span>{{ title }}</span>
+
+  <span>{{ hint }}</span>
+
+</header>
+
+<ol>
+  <srp-task-list-item *ngFor="let task of tasks; let i = index"
+                      [task]="task"
+                      [isEdit]="i === 1"
+                      (taskChanged)="change($event)"></srp-task-list-item>
+
+  <!-- add option -->
+  <srp-task-list-item icon="add"
+                      [task]="newTask"
+                      [isEdit]="true"
+                      (taskAdded)="add($event)"></srp-task-list-item>
+</ol>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-feedback-list',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackListComponent implements OnInit {
   constructor() {}
+
+  @Input()
+  tab;
+
   feedbacks = [
     {
       desc: 'Scale flagship course for freelance designers',
@@ -19,12 +23,12 @@ export class FeedbackListComponent implements OnInit {
       status: 'Closed',
       department: 'Technology',
       author: 'John Doe',
-    },{
+    }, {
       desc: 'Scale flagship course for freelance designers',
       status: 'Submitted',
       department: 'Marketing',
       author: 'John Doe',
-    },{
+    }, {
       desc: 'Scale flagship course for freelance designers',
       status: 'Open',
       department: 'Marketing',

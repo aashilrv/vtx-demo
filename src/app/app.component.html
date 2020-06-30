@@ -1,7 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
-    class="sidenav"
     fixedInViewport
     [mode]="true ? 'side' : 'side'"
     [opened]="true"
@@ -14,6 +13,7 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
+        class="feedback-sidenav-close"
         style="float: right;"
       >
         <mat-icon>cancel</mat-icon>
@@ -21,13 +21,13 @@
     </div>
     <mat-tab-group style="width: 100%;" dynamicHeight>
       <mat-tab label="Open">
-        <app-feedback-list></app-feedback-list>
+        <app-feedback-list tab='open'></app-feedback-list>
       </mat-tab>
       <mat-tab label="Submitted">
-        <app-feedback-list></app-feedback-list>
+        <app-feedback-list tab='open'></app-feedback-list>
       </mat-tab>
       <mat-tab label="Closed">
-        <app-feedback-list></app-feedback-list>
+        <app-feedback-list tab='open'></app-feedback-list>
       </mat-tab>
     </mat-tab-group>
   </mat-sidenav>
@@ -37,7 +37,13 @@
       aria-label="Toggle sidenav"
       mat-icon-button
       (click)="drawer.toggle()"
-    >Open</button>
+    >
+      Open
+    </button>
     <router-outlet></router-outlet>
+    <!-- <srp-toggle-button></srp-toggle-button>
+    <srp-radar-chart></srp-radar-chart>
+    <srp-bar-chart></srp-bar-chart>
+    <srp-radar-chart></srp-radar-chart> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
