@@ -1,7 +1,7 @@
 <mat-button-toggle-group [value]="selectedValue"
-                         (change)="setControlValue($event)">
+                         (change)="setControlValue($event)" class="toggle-button-group-base">
 
-  <mat-button-toggle [value]="true">Yes</mat-button-toggle>
-  <mat-button-toggle [value]="false">No</mat-button-toggle>
+  <mat-button-toggle [value]="true"  class="toggle-button-base toggle-button-yes">Yes</mat-button-toggle>
+  <mat-button-toggle [value]="false" class="toggle-button-base">No</mat-button-toggle>
 
 </mat-button-toggle-group>
