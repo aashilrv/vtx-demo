@@ -5,31 +5,10 @@
     [mode]="true ? 'side' : 'side'"
     [opened]="true"
     position="end"
+    style="width: 420px;"
   >
-    <div class="feedback-sidenav-header">
-      <span class="mat-h3"><b>Projects Feedback</b></span>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        class="feedback-sidenav-close"
-        style="float: right;"
-      >
-        <mat-icon>cancel</mat-icon>
-      </button>
-    </div>
-    <mat-tab-group style="width: 100%;" dynamicHeight>
-      <mat-tab label="Open">
-        <app-feedback-list tab='open'></app-feedback-list>
-      </mat-tab>
-      <mat-tab label="Submitted">
-        <app-feedback-list tab='open'></app-feedback-list>
-      </mat-tab>
-      <mat-tab label="Closed">
-        <app-feedback-list tab='open'></app-feedback-list>
-      </mat-tab>
-    </mat-tab-group>
+  <app-feedback-sidenav></app-feedback-sidenav>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <button
@@ -41,8 +20,8 @@
       Open
     </button>
     <router-outlet></router-outlet>
-    <!-- <srp-toggle-button></srp-toggle-button>
-    <srp-radar-chart></srp-radar-chart>
+    <srp-toggle-button></srp-toggle-button>
+    <!-- <srp-radar-chart></srp-radar-chart>
     <srp-bar-chart></srp-bar-chart>
     <srp-radar-chart></srp-radar-chart> -->
   </mat-sidenav-content>
